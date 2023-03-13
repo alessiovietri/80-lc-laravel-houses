@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+// Models
+use App\Models\House;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,5 +17,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    $houses = House::all();
+
+    dd($houses);
+
     return view('welcome');
 });
